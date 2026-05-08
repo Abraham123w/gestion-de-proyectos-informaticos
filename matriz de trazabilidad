@@ -1,0 +1,181 @@
+
+<h2 class="sr-only">Matriz de trazabilidad del proyecto GerencIA  relaciona requerimientos de usuario con objetivos, requerimientos funcionales y entregables</h2>
+
+<style>
+.mt-wrap { padding: 1rem 0; font-family: var(--font-sans); }
+.mt-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1.25rem; }
+.mt-table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
+.mt-table th { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-align: left; padding: 8px 12px; border-bottom: 0.5px solid var(--color-border-secondary); background: var(--color-background-secondary); }
+.mt-table td { padding: 10px 12px; vertical-align: top; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); line-height: 1.45; }
+.mt-table tr:last-child td { border-bottom: none; }
+.mt-table tr:hover td { background: var(--color-background-secondary); }
+.col-id { width: 42px; color: var(--color-text-secondary) !important; font-weight: 500; font-size: 12px; }
+.col-req { width: 19%; }
+.col-obj { width: 19%; }
+.col-rf { width: 21%; }
+.col-ent { width: 20%; }
+.col-est { width: 9%; text-align: center !important; }
+.badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: var(--border-radius-md); white-space: nowrap; }
+.b-must { background: #E1F5EE; color: #085041; }
+.b-should { background: #E6F1FB; color: #0C447C; }
+.b-could { background: #FAEEDA; color: #633806; }
+.mt-legend { display: flex; gap: 16px; margin-top: 1rem; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--color-text-secondary); }
+.legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+.section-header td { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); background: var(--color-background-secondary) !important; padding: 6px 12px; letter-spacing: 0.04em; border-bottom: 0.5px solid var(--color-border-secondary); }
+</style>
+
+<div class="mt-wrap">
+  <div class="mt-title">Matriz de trazabilidad — GerencIA</div>
+
+  <table class="mt-table">
+    <thead>
+      <tr>
+        <th class="col-id">#</th>
+        <th class="col-req">Requerimiento del usuario</th>
+        <th class="col-obj">Objetivo del proyecto</th>
+        <th class="col-rf">Requerimiento funcional</th>
+        <th class="col-ent">Entregable asociado</th>
+        <th class="col-est">Prioridad</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr class="section-header">
+        <td colspan="6">AGENTE ORQUESTADOR (CEO)</td>
+      </tr>
+
+      <tr>
+        <td class="col-id">RF-01</td>
+        <td>Recibir asesoría estratégica enviando un correo electrónico</td>
+        <td>Implementar interfaz de comunicación integrada al flujo de trabajo del usuario</td>
+        <td>Módulo de recepción y procesamiento de correos electrónicos vía Gmail API</td>
+        <td>Agente Orquestador funcional con integración Gmail</td>
+        <td class="col-est"><span class="badge b-must">Must</span></td>
+      </tr>
+      <tr>
+        <td class="col-id">RF-02</td>
+        <td>Que la plataforma entienda qué área de la empresa necesita atención</td>
+        <td>Modelar las funciones críticas de roles CEO, CFO y CTO en capacidades de IA</td>
+        <td>Módulo de clasificación y delegación de solicitudes a agentes especialistas</td>
+        <td>Motor de enrutamiento del Agente CEO con lógica de derivación</td>
+        <td class="col-est"><span class="badge b-must">Must</span></td>
+      </tr>
+
+      <tr class="section-header">
+        <td colspan="6">AGENTE CFO — FINANZAS</td>
+      </tr>
+
+      <tr>
+        <td class="col-id">RF-03</td>
+        <td>Obtener proyecciones de flujo de caja basadas en datos reales del negocio</td>
+        <td>Proporcionar soporte ejecutivo continuo en el área de finanzas para PYMES</td>
+        <td>Módulo de análisis financiero y proyección de flujo de caja</td>
+        <td>Agente CFO con motor de análisis financiero y reportes automáticos</td>
+        <td class="col-est"><span class="badge b-must">Must</span></td>
+      </tr>
+      <tr>
+        <td class="col-id">RF-04</td>
+        <td>Recibir alertas automáticas sobre riesgos financieros detectados</td>
+        <td>Evaluar impacto de la solución mediante KPIs de precisión de proyecciones financieras</td>
+        <td>Módulo de detección proactiva de riesgos y generación de alertas</td>
+        <td>Sistema de alertas por correo electrónico generadas por el Agente CFO</td>
+        <td class="col-est"><span class="badge b-must">Must</span></td>
+      </tr>
+      <tr>
+        <td class="col-id">RF-05</td>
+        <td>Analizar documentos financieros no estructurados (contratos, reportes)</td>
+        <td>Implementar infraestructura RAG conectada a Google Drive</td>
+        <td>Módulo de extracción y análisis de documentos mediante RAG</td>
+        <td>Capa de conocimiento RAG integrada con Google Drive</td>
+        <td class="col-est"><span class="badge b-must">Must</span></td>
+      </tr>
+
+      <tr class="section-header">
+        <td colspan="6">AGENTE CTO — TECNOLOGÍA</td>
+      </tr>
+
+      <tr>
+        <td class="col-id">RF-06</td>
+        <td>Obtener un diagnóstico del nivel de madurez digital de su empresa</td>
+        <td>Proporcionar soporte ejecutivo continuo en el área de tecnología para PYMES</td>
+        <td>Módulo de evaluación y diagnóstico de transformación digital</td>
+        <td>Agente CTO con cuestionario de madurez digital y reporte de brechas</td>
+        <td class="col-est"><span class="badge b-should">Should</span></td>
+      </tr>
+      <tr>
+        <td class="col-id">RF-07</td>
+        <td>Recibir recomendaciones de herramientas tecnológicas acordes al tamaño del negocio</td>
+        <td>Diseñar arquitectura MAS con frameworks modernos de orquestación agentiva</td>
+        <td>Módulo de recomendación de stack tecnológico contextualizado</td>
+        <td>Base de conocimiento tecnológico del Agente CTO con respuestas personalizadas</td>
+        <td class="col-est"><span class="badge b-should">Should</span></td>
+      </tr>
+
+      <tr class="section-header">
+        <td colspan="6">AGENTE COO — OPERACIONES</td>
+      </tr>
+
+      <tr>
+        <td class="col-id">RF-08</td>
+        <td>Gestionar metas y tareas del negocio con metodología OKR</td>
+        <td>Proporcionar soporte ejecutivo continuo en el área de operaciones para PYMES</td>
+        <td>Módulo de gestión de objetivos y resultados clave (OKR)</td>
+        <td>Agente COO con tablero de seguimiento de OKRs por correo/Drive</td>
+        <td class="col-est"><span class="badge b-must">Must</span></td>
+      </tr>
+      <tr>
+        <td class="col-id">RF-09</td>
+        <td>Identificar ineficiencias operativas en los procesos internos</td>
+        <td>Evaluar impacto mediante KPI de ahorro de tiempo ejecutivo</td>
+        <td>Módulo de análisis de procesos y detección de cuellos de botella operativos</td>
+        <td>Reporte de diagnóstico operacional generado por el Agente COO</td>
+        <td class="col-est"><span class="badge b-should">Should</span></td>
+      </tr>
+
+      <tr class="section-header">
+        <td colspan="6">INFRAESTRUCTURA Y CALIDAD</td>
+      </tr>
+
+      <tr>
+        <td class="col-id">RF-10</td>
+        <td>Confiar en que las recomendaciones sean verídicas y estén ancladas en datos reales</td>
+        <td>Establecer mecanismo de validación de recomendaciones para minimizar alucinaciones</td>
+        <td>Módulo de validación cruzada entre Agente Orquestador y sistema RAG</td>
+        <td>Pipeline de validación con revisión del Agente CEO antes de entrega al usuario</td>
+        <td class="col-est"><span class="badge b-must">Must</span></td>
+      </tr>
+      <tr>
+        <td class="col-id">RF-11</td>
+        <td>Que sus datos empresariales estén protegidos y no sean accesibles por terceros</td>
+        <td>Desarrollar y validar plataforma accesible y de alta calidad para PYMES</td>
+        <td>Módulo de cifrado en tránsito/reposo y anonimización de datos sensibles</td>
+        <td>Capa de seguridad y políticas de privacidad de datos del sistema</td>
+        <td class="col-est"><span class="badge b-must">Must</span></td>
+      </tr>
+      <tr>
+        <td class="col-id">RF-12</td>
+        <td>Compartir documentos desde Google Drive para que la IA los analice directamente</td>
+        <td>Implementar interfaz de comunicación integrada al flujo de trabajo del usuario</td>
+        <td>Módulo de integración y lectura de archivos desde Google Drive API</td>
+        <td>Conector Google Drive para ingesta de documentos en la capa RAG</td>
+        <td class="col-est"><span class="badge b-must">Must</span></td>
+      </tr>
+      <tr>
+        <td class="col-id">RF-13</td>
+        <td>Acceder a dashboards visuales con el estado de su negocio</td>
+        <td>Evaluar impacto mediante KPIs de ahorro de tiempo y precisión</td>
+        <td>Módulo de generación de reportes visuales entregados por correo</td>
+        <td>Plantillas de informes ejecutivos periódicos generados automáticamente</td>
+        <td class="col-est"><span class="badge b-could">Could</span></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <div class="mt-legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#1D9E75;"></div> Must — crítico para MVP</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#378ADD;"></div> Should — importante, segunda iteración</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#BA7517;"></div> Could — deseable, si hay recursos</div>
+  </div>
+</div>
